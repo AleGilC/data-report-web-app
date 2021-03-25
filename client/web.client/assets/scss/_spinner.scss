@@ -1,0 +1,52 @@
+.qd-spinner-wrapper {
+  position: relative;
+  height: 5em;
+  width: 5em;
+
+  .qd-spinner-circle {
+    background: transparent;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 0, 0, 0.4) inset;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border-width: 35px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform, border-width;
+    transform: scale(0);
+    transform-origin: center;
+    opacity: 0;
+
+    &--primary {
+      border-color: #379790;
+      animation: pulse 1.7s linear infinite;
+    }
+    &--secondary {
+      border-color: #561764;
+      animation: pulse 1.7s linear 0.85s infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border-width: 35px;
+    transform: scale(0);
+    opacity: 1;
+  }
+  30%,
+  80% {
+    border-width: 7px;
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  100% {
+    border-width: 7px;
+    transform: scale(1);
+    opacity: 0;
+  }
+}

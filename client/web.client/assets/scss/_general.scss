@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Gotham Rounded';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Gotham Rounded'), local('GothamRounded'),
+    url('/fonts/GothamRounded-Light.otf') format('opentype'); /* Safari, Android, iOS */
+}
+* {
+  font-family: 'Gotham Rounded', 'sans-serif';
+}
