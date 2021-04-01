@@ -1,32 +1,32 @@
-import Vue from 'vue'
-import Toasted from 'vue-toasted'
+import Vue from 'vue';
+import Toasted from 'vue-toasted';
 
 const options = {
   iconPack: 'mdi',
   position: 'bottom-right',
   duration: 6000,
-}
-Vue.use(Toasted, options)
+};
+Vue.use(Toasted, options);
 
 const message = (text) => {
-  const style = 'style="font-weight: 400;"'
+  const style = 'style="font-weight: 400;"';
   const replace = (txt, i) =>
-    `<p ${i ? style : ''}>{txt}</p>\n`.replace('{txt}', txt)
+    `<p ${i ? style : ''}>{txt}</p>\n`.replace('{txt}', txt);
 
   const content = text
     .split('\n')
     .filter((txt) => !!txt.trim())
     .map((txt, i) => replace(txt, i))
-    .join('')
+    .join('');
 
-  return `<div style="padding-top: 4px;">${content}</div>`
-}
+  return `<div style="padding-top: 4px;">${content}</div>`;
+};
 
 const ToastMixin = (text, options = {}) => {
-  text = message(text)
+  text = message(text);
 
-  Vue.toasted.show(text, options)
-}
+  Vue.toasted.show(text, options);
+};
 
 const toastsBasic = [
   { type: 'message', icon: 'mdi-tag-outline' },
@@ -34,7 +34,7 @@ const toastsBasic = [
   { type: 'info', icon: 'mdi-information-variant' },
   { type: 'warn', icon: 'mdi-alert-outline' },
   { type: 'error', icon: 'mdi-alert-circle-outline' },
-]
+];
 
 const toasts = toastsBasic.reduce((obj, item) => {
   obj[item.type] = (text, options = {}) => {
@@ -42,16 +42,16 @@ const toasts = toastsBasic.reduce((obj, item) => {
       action: {
         text: 'x',
         onClick: (e, toastObject) => {
-          toastObject.goAway(0)
+          toastObject.goAway(0);
         },
       },
       ...item,
       ...options,
-    })
-  }
-  return obj
-}, {})
+    });
+  };
+  return obj;
+}, {});
 
 export default (ctx, inject) => {
-  inject('toast', toasts)
-}
+  inject('toast', toasts);
+};
