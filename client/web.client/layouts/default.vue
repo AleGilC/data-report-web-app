@@ -2,7 +2,7 @@
   <v-app class="pa-3 grey lighten-4">
     <qd-toolbar></qd-toolbar>
 
-    <qd-navigation v-if="dontDashboard"></qd-navigation>
+    <qd-navigation></qd-navigation>
 
     <v-main class="min-h-75">
       <nuxt />
@@ -11,13 +11,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+// import { mapGetters } from 'vuex';
 import QdToolbar from '@/components/qd-toolbar/QdToolbar';
 import QdNavigation from '@/components/qd-navigation/QdNavigation';
 
 export default {
   components: { QdToolbar, QdNavigation },
-  middleware: 'authenticated',
   data() {
     return {
       dontDashboard: true,
@@ -25,30 +24,30 @@ export default {
       maxTimeInactivitySession: 7200, // seconds
     };
   },
-  computed: mapGetters({
-    nav: 'layout/getNavigation',
-    startSession: 'session/currentStartSession',
-  }),
+  // computed: mapGetters({
+  //   nav: 'layout/getNavigation',
+  //   startSession: 'session/currentStartSession',
+  // }),
   watch: {
-    $route: 'verifyRoute',
-    expiredSession(val) {
-      if (val) {
-        this.$toast.error('Session expired');
-        this.$router.replace(this.localeRoute({ name: 'sign-out' }));
-      }
-    },
+    // $route: 'verifyRoute',
+    // expiredSession(val) {
+    //   if (val) {
+    //     this.$toast.error('Session expired');
+    //     this.$router.replace(this.localeRoute({ name: 'sign-out' }));
+    //   }
+    // },
   },
   created() {
-    this.verifyRoute();
+    // this.verifyRoute();
   },
   mounted() {
     this.activityWatcher();
   },
   updated() {},
   methods: {
-    verifyRoute() {
-      this.dontDashboard = this.$route.name.split('___')[0] !== 'dashboard';
-    },
+    // verifyRoute() {
+    //   this.dontDashboard = this.$route.name.split('___')[0] !== 'dashboard';
+    // },
     activityWatcher() {
       const slf = this;
       let secondsSinceLastActivity = 0;
