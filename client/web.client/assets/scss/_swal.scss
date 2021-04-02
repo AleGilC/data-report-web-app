@@ -1,0 +1,122 @@
+.swal2-popup.swal2-modal {
+  .swal2-header {
+    flex-direction: column-reverse;
+  }
+
+  .swal2-title {
+    margin: 10px 0 0;
+    padding: 0 20px;
+    font-size: 1.1em;
+    color: $color-primary;
+    caret-color: $color-primary;
+  }
+
+  .swal2-icon {
+    transform: scale(0.6);
+    margin: 0;
+  }
+
+  #swal2-content {
+    font-size: 0.87em;
+    padding: 0 10px;
+
+    .primary--text {
+      color: $color-primary;
+      caret-color: $color-primary;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    > p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .swal2-actions {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .swal2-styled {
+    font-size: 0.9em !important;
+    font-weight: 600;
+    border: 1px solid $color-primary !important;
+    min-width: 140px;
+    transition: border 0.2s, color 0.2s;
+
+    &.swal2-cancel {
+      color: $color-primary;
+
+      &:hover,
+      &:focus {
+        color: $color-grey;
+        border-color: $color-grey !important;
+        background-image: none !important;
+      }
+    }
+  }
+
+  .swal-font-bold {
+    font-weight: 500;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.97em;
+  }
+}
+
+/** Toast */
+.toasted-container .toasted {
+  padding: 10px 16px !important;
+}
+.toasted .primary,
+.toasted.toasted-primary {
+  caret-color: $color-secondary !important;
+  background: white !important;
+  border-radius: 4px !important;
+  color: #222222 !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+.toasted .primary,
+.toasted.toasted-primary.success {
+  color: $color-primary !important;
+}
+.toasted .primary,
+.toasted.toasted-primary.error {
+  color: #f10b0b !important;
+}
+.toasted > i {
+  margin-right: 15px !important;
+  font-size: 25px !important;
+  background: $color-secondary !important;
+  color: $color-primary !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+  width: 42px !important;
+  height: 42px !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.toasted > div > p:first-child {
+  margin-bottom: 4px;
+}
+
+.toasted > a.action.ripple {
+  font-size: 10px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  color: white !important;
+  background: grey !important;
+  width: 20px !important;
+  height: 20px !important;
+  text-align: center !important;
+  padding: 4px 3px !important;
+  border-radius: 50% !important;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.toasted:hover > a.action.ripple {
+  opacity: 1;
+}

@@ -8,3 +8,158 @@
 * {
   font-family: 'Gotham Rounded', 'sans-serif';
 }
+
+.bg-qlip-data {
+  background-image: url('/img/bg-master-data.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.v-card.v-card--add {
+  background-color: transparent !important;
+  border: 2px dashed #4b1755 !important;
+  height: 100% !important;
+}
+
+.absolute-top-right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+.opacity-1 {
+  opacity: 1 !important;
+}
+.opacity-2 {
+  opacity: 0.2 !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.pa-3 {
+  padding: 12px !important;
+}
+
+.min-h-75 {
+  min-height: 75%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.v-tabs .v-tab {
+  text-transform: capitalize;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+.v-bottom-navigation .v-btn.v-btn--active {
+  color: #4b1755 !important;
+  position: relative;
+}
+.v-bottom-navigation .v-btn.v-btn--active:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #4b1755;
+}
+
+.v-application {
+  &.grey.lighten-4 {
+    background-color: #f5f5f5 !important;
+    border-color: #f5f5f5 !important;
+  }
+
+  .v-file-input .v-text-field__slot {
+    width: 89%;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .relative {
+    position: relative !important;
+  }
+
+  .absolute {
+    position: absolute !important;
+  }
+  .absolute-top-right {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+  }
+
+  .v-btn {
+    text-transform: capitalize !important;
+    font-weight: 400 !important;
+  }
+
+  .v-main .rounded-sm,
+  .v-dialog .rounded-sm {
+    border-radius: 4px !important;
+  }
+
+  .v-navigation-drawer {
+    .overline {
+      font-size: 0.95rem !important;
+    }
+    .drawer-left-inner {
+      overflow-y: auto;
+      max-height: calc(100% - 90px);
+    }
+  }
+
+  .v-badge--dot .v-badge__badge {
+    border-radius: 10px;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* Scroll */
+/* Tamaño del scroll */
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+*::-webkit-scrollbar-thumb {
+  background: #999999;
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: #666666;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Estilos track de scroll */
+*::-webkit-scrollbar-track {
+  background: #e1e1e1;
+}
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background: #b4b4b4;
+}
+
+/* Customs */
+.max-card-document-title-width {
+  max-width: 79%;
+}
