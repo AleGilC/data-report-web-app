@@ -26,7 +26,7 @@
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-menu open-on-hover offset-y>
-        <template v-slot:activator="{ on, attrs }">
+        <template #activator="{ on, attrs }">
           <v-btn
             class="mr-4 text-capitalize"
             color="primary"
@@ -41,11 +41,7 @@
         </template>
 
         <v-list>
-          <v-list-item
-            v-for="(item, k) in dropdown"
-            :key="k"
-            @click.prevent="getRedirect(item.policy)"
-          >
+          <v-list-item v-for="(item, k) in dropdown" :key="k">
             <v-list-item-title>{{ $t(item.title) }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -92,6 +88,7 @@ export default {
       try {
         await this.$api.auth.signIn();
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.log(error);
       }
     },
