@@ -66,7 +66,7 @@
 import drawerLeftInner from '@/config/drawer-left-inner';
 
 export default {
-  name: 'QdDraweLeftInner',
+  name: 'MdDraweLeftInner',
   data() {
     return {
       actions: [],

@@ -57,16 +57,16 @@
         {{ $t('auth.signIn') }}
       </v-btn>
 
-      <qd-select-language></qd-select-language>
+      <m-select-language></m-select-language>
     </v-app-bar>
   </v-card>
 </template>
 
 <script>
-import QdSelectLanguage from '@/components/qd-select-language/QdSelectLanguage';
+import MSelectLanguage from '@/components/m-select-language/MSelectLanguage';
 export default {
-  name: 'QdAuthToolbar',
-  components: { QdSelectLanguage },
+  name: 'MAuthToolbar',
+  components: { MSelectLanguage },
   data() {
     return {
       loading: false,
@@ -88,7 +88,6 @@ export default {
       try {
         await this.$api.auth.signIn();
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.log(error);
       }
     },

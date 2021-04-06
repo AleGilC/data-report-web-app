@@ -71,7 +71,7 @@
 // import { mapGetters } from 'vuex';
 import configNav from '@/config/navigation';
 export default {
-  name: 'QdNavigation',
+  name: 'MdNavigation',
   data() {
     return {
       loading: false,

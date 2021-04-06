@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <qd-auth-toolbar></qd-auth-toolbar>
+    <m-auth-toolbar></m-auth-toolbar>
 
     <v-main>
       <nuxt />
@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import QdAuthToolbar from '@/components/qd-auth-toolbar/QdAuthToolbar';
+import MAuthToolbar from '@/components/m-auth-toolbar/MAuthToolbar';
 
 export default {
-  components: { QdAuthToolbar },
+  components: { MAuthToolbar },
 };
 </script>

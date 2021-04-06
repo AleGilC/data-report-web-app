@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <qd-drawer-left :visible.sync="drawerLeft"></qd-drawer-left>
+    <m-drawer-left :visible.sync="drawerLeft"></m-drawer-left>
 
     <v-app-bar clipped-left text short color="white" class="rounded-lg">
       <v-badge
@@ -79,7 +79,7 @@
         <v-btn color="secondary"> Search </v-btn>
       </div>
 
-      <qd-select-language></qd-select-language>
+      <m-select-language></m-select-language>
 
       <!-- <v-btn
         :color="access ? 'primary' : 'grey'"
@@ -94,22 +94,22 @@
       </v-btn>
     </v-app-bar>
 
-    <qd-drawer-right :visible.sync="drawerRight"></qd-drawer-right>
+    <m-drawer-right :visible.sync="drawerRight"></m-drawer-right>
   </v-container>
 </template>
 
 <script>
 // import { mapGetters } from 'vuex';
-import QdSelectLanguage from '@/components/qd-select-language/QdSelectLanguage';
-import QdDrawerLeft from './QdDrawerLeft';
-import QdDrawerRight from './QdDrawerRight';
+import MSelectLanguage from '@/components/m-select-language/MSelectLanguage';
+import MDrawerLeft from './MDrawerLeft';
+import MDrawerRight from './MDrawerRight';
 
 export default {
-  name: 'QdToolbar',
+  name: 'MToolbar',
   components: {
-    QdDrawerLeft,
-    QdDrawerRight,
-    QdSelectLanguage,
+    MDrawerLeft,
+    MDrawerRight,
+    MSelectLanguage,
   },
   data() {
     return {

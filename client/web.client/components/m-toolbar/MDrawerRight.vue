@@ -18,7 +18,7 @@
       </v-layout>
     </template>
 
-    <qd-drawer-right-inner></qd-drawer-right-inner>
+    <m-drawer-right-inner></m-drawer-right-inner>
 
     <template #append>
       <div class="pt-4 d-flex flex-column align-center">
@@ -35,10 +35,10 @@
 </template>
 
 <script>
-import QdDrawerRightInner from './QdDrawerRightInner';
+import MDrawerRightInner from './MDrawerRightInner';
 export default {
-  name: 'QdDrawerRight',
-  components: { QdDrawerRightInner },
+  name: 'MDrawerRight',
+  components: { MDrawerRightInner },
   props: {
     visible: {
       type: Boolean,

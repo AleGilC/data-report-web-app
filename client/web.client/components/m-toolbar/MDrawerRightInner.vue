@@ -33,7 +33,7 @@
 // import QdEnterprisesList from '@/components/qd-enterprises-list/QdEnterprisesList';
 
 export default {
-  name: 'QdDrawerRightInner',
+  name: 'MDrawerRightInner',
   // components: { QdEnterprisesList },
   data() {
     return {

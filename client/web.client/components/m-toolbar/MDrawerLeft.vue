@@ -25,18 +25,18 @@
 
     <v-layout class="drawer-left-inner px-6 mt-6">
       <v-flex>
-        <qd-drawe-left-inner></qd-drawe-left-inner>
+        <m-drawe-left-inner></m-drawe-left-inner>
       </v-flex>
     </v-layout>
   </v-navigation-drawer>
 </template>
 
 <script>
-import QdDraweLeftInner from './QdDraweLeftInner';
+import MDraweLeftInner from './MDraweLeftInner';
 
 export default {
-  name: 'QdDrawerLeft',
-  components: { QdDraweLeftInner },
+  name: 'MDrawerLeft',
+  components: { MDraweLeftInner },
   props: {
     visible: {
       type: Boolean,

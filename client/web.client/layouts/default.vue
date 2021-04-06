@@ -1,8 +1,8 @@
 <template>
   <v-app class="pa-3 grey lighten-4">
-    <qd-toolbar></qd-toolbar>
+    <m-toolbar></m-toolbar>
 
-    <qd-navigation></qd-navigation>
+    <m-navigation></m-navigation>
 
     <v-main class="min-h-75">
       <nuxt />
@@ -12,11 +12,11 @@
 
 <script>
 // import { mapGetters } from 'vuex';
-import QdToolbar from '@/components/qd-toolbar/QdToolbar';
-import QdNavigation from '@/components/qd-navigation/QdNavigation';
+import MToolbar from '@/components/m-toolbar/MToolbar';
+import MNavigation from '@/components/m-navigation/MNavigation';
 
 export default {
-  components: { QdToolbar, QdNavigation },
+  components: { MToolbar, MNavigation },
   data() {
     return {
       dontDashboard: true,

@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'QdSelectLanguage',
+  name: 'MdSelectLanguage',
   computed: {
     currentLocale() {
       return this.$i18n.locale;
