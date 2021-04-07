@@ -6,15 +6,15 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ' + 'Master Report Data',
-    title: 'Master Report Data',
+    titleTemplate: '%s - ' + 'Master Report',
+    title: 'Master Report',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Sistema centralizado para manejar data',
+        content: 'Sistema centralizado para...',
       },
     ],
     link: [
@@ -87,9 +87,9 @@ export default {
   },
   i18n: {
     locales: Object.keys(lang),
-    defaultLocale: 'es',
+    defaultLocale: 'en',
     vueI18n: {
-      fallbackLocale: 'es',
+      fallbackLocale: 'en',
       messages: lang,
     },
   },

@@ -35,9 +35,8 @@
             text
             v-bind="attrs"
             v-on="on"
+            >{{ $t('auth.signUp') }}</v-btn
           >
-            {{ $t('auth.signUp') }}
-          </v-btn>
         </template>
 
         <v-list>
@@ -72,11 +71,11 @@ export default {
       loading: false,
       dropdown: [
         {
-          title: 'natural',
+          title: 'By Username',
           policy: process.env.VUE_APP_B2C_PN_SINGUP_POLICY_ID,
         },
         {
-          title: 'legal',
+          title: 'By Google Account',
           policy: process.env.VUE_APP_B2C_PJ_SINGUP_POLICY_ID,
         },
       ],
